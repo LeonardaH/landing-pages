@@ -1,0 +1,279 @@
+.main__image{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Pets/assets/stage/stage.webp);
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+}
+
+.main__content {
+    height: 100%;
+    @include flexbox($flex-direction: column, $align-items: flex-start, $justify-content: center);
+
+    h1{
+        color: $white;
+        font-size: $extraLarge;
+        text-transform: uppercase;
+
+        @include tablet{
+            font-size: $subtitle;
+        }
+    }
+
+    p{
+        color: $white;
+        font-size: $paragrapfFont;
+        padding-top: 10px;
+    }
+
+    .button{
+        margin-top: $paragSpace;
+        text-transform: $transform;
+    }
+}
+
+.main__gallery__holder {
+    position: relative;
+    display: flex;
+    padding-top: 460px;
+    width: 100%;
+    max-width: 100%;
+
+    @include tablet {
+        padding-top: 600px;
+    }
+
+    img {
+        max-width: 100%;
+        width: 25%;
+
+        @include tablet {
+            width: 25%;
+        }
+
+        @include mobile {
+            display: none;
+
+            &.shown{
+                display: block;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+.main__top {
+    background-color: $lightGray;
+    margin-top: $padding;
+    padding: 40px $paragSpace;
+    @include flexbox;
+
+    @include tablet {
+        flex-direction: column;
+
+        h2 {
+            font-size: $tabletSubtitle;
+            padding-bottom: $paragSpace;
+        }
+    }
+
+    .button {
+        background-color: $orange;
+
+        a {
+            color: $white;
+        }
+    }
+
+}
+
+.main__middle {
+    @include flexbox(start);
+    gap: 20px;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__description {
+
+        max-width: 500px;
+
+        @include tablet {
+            padding: $paragSpace;
+            max-width: 100%;
+        }
+
+        p {
+            padding-top: $paragSpace;
+        }
+
+        span {
+            color: $gray;
+        }
+
+        button {
+            background-color: $orange;
+            text-transform: $transform;
+            margin-top: $paragSpace;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.main__video {
+    padding: 140px 0 $paragSpace;
+
+    iframe {
+        max-width: 100%;
+    }
+
+    &__description {
+
+        width: 500px;
+        margin: 0 auto;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        h3 {
+            padding-top: $paragSpace;
+        }
+
+        p {
+            padding-top: $paragSpace;
+            color: $gray;
+        }
+
+    }
+}
+
+.main__process {
+    background-color: $lightGray;
+    margin-top: $padding;
+    padding: $padding 0;
+
+    &__wrapper__description {
+
+        p {
+            color: $gray;
+            padding-top: 10px
+        }
+    }
+
+    &__wrapper__gallery {
+        display: flex;
+        padding-top: 40px;
+        flex-wrap: wrap;
+        gap: 25px;
+
+        &__item {
+            width: 250px;
+
+            @include tablet {
+                flex: 40%;
+            }
+
+            @include mobile {
+                width: 100%;
+                flex: auto;
+            }
+
+            img {
+                width: 26px;
+                height: 26px;
+            }
+
+            h3 {
+                padding: $paragSpace 0;
+            }
+
+            p {
+                color: $gray;
+            }
+        }
+    }
+}
+
+.main__testimonials {
+    padding-bottom: $padding;
+
+    &__description {
+        p {
+            padding-top: $paragSpace;
+            color: $gray;
+        }
+    }
+
+    &__gallery {
+        @include flexbox;
+        gap: 60px;
+
+        &__item {
+            background-color: $lightGray;
+            padding: 40px 20px;
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+
+            @include mobile{
+                display: none;
+
+                &.shown{
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            p {
+                color: $gray;
+                padding-top: $paragSpace;
+
+                &:nth-child(4) {
+                    padding-top: 4px;
+                }
+            }
+
+            h4 {
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+.main__banner {
+    background: linear-gradient(rgba(255, 190, 68, 0.5), rgba(255, 190, 68, 0.5)),
+        url(/Pets/assets/banner-footer/banner.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: $white;
+    padding: $padding 0;
+
+    @include mobile {
+        background-position: center;
+    }
+
+    p {
+        max-width: 100%;
+        width: 500px;
+        margin: 0 auto;
+        padding: $paragSpace 0;
+    }
+
+    .button {
+        margin-right: 10px;
+
+        a {
+            text-transform: $transform;
+        }
+    }
+
+
+}

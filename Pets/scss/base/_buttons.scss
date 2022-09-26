@@ -1,0 +1,15 @@
+.button{
+    width: 180px;
+    height: 38px;
+    background-color: $white;
+    border: none;
+    display: inline-block;
+
+    @include tablet{
+        height: 34px;
+    }
+
+    a{
+        color: $black;
+    }
+}

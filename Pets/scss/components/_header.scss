@@ -1,0 +1,101 @@
+
+.header__wrapper{
+    @include flexbox;
+    height: 60px;
+    position: relative;
+    z-index: 999;
+
+    &__nav{
+        
+        @include tablet {
+            position: absolute;
+            left: -13%;
+            top: 2%;
+            z-index: 999;
+            background-color: $black;
+            width: 80%;
+            height: 100vh;
+            padding: 20px;
+            display: none;
+        }
+
+        &__links{
+            @include flexbox;
+
+            @include tablet{
+                @include flexbox(flex-start, flex-start, column);
+                padding-left: 40px;
+            }
+            li {
+                padding-right: $paragSpace;
+                color: $white;
+            
+                @include tablet {
+                    padding-top: $paragSpace;
+                }
+            
+                a {
+                    color: $white;
+                    font-size: $headerFont;
+                    text-transform: $transform;
+                }
+            }
+            
+            &__drop {
+                display: none;
+            }
+        }
+
+        
+    }
+
+    .menu-bar{
+        display: none;
+    }
+
+    @include tablet{
+        .menu-bar {
+            width: 32px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+        
+            .bar {
+                height: 3px;
+                width: 100%;
+                margin-top: 4px;
+                background-color: $white;
+                display: block;
+                border-radius: 5px;
+                transition: 0.3s ease;
+
+                .bar1 {
+                        transform: translateY(-4px);
+                    }
+                
+                .bar2 {
+                    transform: translateY(4px);
+                }
+            }
+        }
+    }
+}
+
+
+// rotating menu
+
+.change .bar1 {
+    transform: translateY(8px) rotateZ(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+}
+        
+    

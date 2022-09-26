@@ -1,0 +1,90 @@
+.footer{
+    background-color: $footerColor;
+    color: white;
+
+    &__wrapper{
+        @include flexbox($align-items: start);
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: $padding 0;
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+        h3{
+            padding-bottom: 40px;
+        }
+
+        p{
+            color: $gray;
+        }
+
+        
+        &__item{
+            flex: 1 1 0px;
+
+            &__holder {
+                    @include flexbox(start, flex-start);
+                    gap: 100px;
+
+                    li{
+                        padding-bottom: $paragSpace;
+                    }
+                    a{
+                        color: $gray;
+                    }
+            }
+
+            &--right{
+                @include tablet{
+                    flex-basis: 100%;
+                }
+            }
+
+            &__contact {
+                @include flexbox(start);
+                gap: $paragSpace;
+                padding-bottom: 10px;
+
+                p{
+                    padding-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+// footer copyrights
+
+.footer__copyright{
+    background-color: $footerCopyright;
+    width: 100%;
+    padding: $paragSpace 0;
+
+    &__wrapper{
+        @include flexbox;
+        
+        &__text{
+            @include tablet {
+                max-width: 300px;
+            
+                p {
+                    font-size: $extraSmall;
+                }
+            }
+            
+            span {
+                color: $orange;
+            }
+        }
+        &__icons{
+            img{
+                padding-left: 20px;
+            }
+        }
+
+    }
+
+
+}
