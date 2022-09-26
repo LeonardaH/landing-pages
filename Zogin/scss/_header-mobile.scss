@@ -1,0 +1,135 @@
+@import "./variable";
+@import "./base";
+
+
+.mobile__header{
+    display: none;
+}
+
+@include mobile{
+    .mobile__header{
+        display: block;
+        position: relative;
+
+        &__top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+
+            &__logo{
+
+                img{
+                    width: 60%;
+                    max-width: 100%;
+                }
+            }
+
+            &__hamburger {
+                width: 32px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+
+                .line {
+                    height: 3px;
+                    width: 100%;
+                    background-color: black;
+                    display: block;
+                    border-radius: 5px;
+                    transition: 0.3s ease;
+                }
+            
+                .line1 {
+                    transform: translateY(-4px);
+                }
+            
+                .line3 {
+                    transform: translateY(4px);
+                }
+            }
+        }
+
+        &__main{
+            display: none;
+            background-color: $white;
+            width: 300px;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            padding: 60px 30px;
+
+            img{
+                padding-bottom:  20px;
+            }
+
+            .open-nav {
+                color: cornflowerblue;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: 400;
+                display: block;
+            }
+
+            &__nav{
+
+                display: none;
+                padding-top: 20px;
+
+                li{
+                    list-style: none;
+                    display: block;
+                    padding-top: 8px;
+                    
+                    a{
+                        color: $subtitle;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            &__info{
+                padding-bottom: 10px;
+
+                li{
+                    padding-top: 10px;
+                    text-transform: uppercase;
+                    color: $subtitle;
+                    font-size: 18px;
+                    line-height: 2.5;
+
+                    a{
+                        color: $subtitle;
+                        font-size: 18px;
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            &__social{
+                padding-top: 30px;
+                
+                img{
+                    padding-left: 8px;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.change .line1 {
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: translateY(-2px) rotateZ(45deg);
+}

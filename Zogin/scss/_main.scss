@@ -1,0 +1,472 @@
+@import "./base";
+@import "./media";
+@import "./variable";
+@import "./button";
+
+
+// welcome
+
+.welcome {
+    padding-top: 140px;
+
+    &__gallery {
+        position: relative;
+
+        &__image {
+
+            margin-left: 20px;
+            
+
+            &:nth-child(2) {
+                position: absolute;
+
+                @include mobile {
+                    position: unset;
+                }
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                bottom: 0;
+
+                @include mobile {
+                        position: unset;
+                }
+            }
+
+        }
+
+        @include mobile {
+            
+            img {
+                 margin-left: 0;
+                width: 100%;
+                max-width: 100%;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    &__description {
+
+        @include tablet{
+            padding-top: 40px;
+        }
+        
+        @include mobile{
+            padding-top: 40px;
+        }
+
+        h2 {
+            padding: 20px 0;
+        }
+
+        span {
+            color: $primary-color;
+        }
+
+        p {
+            padding: 20px 0 40px 0;
+        }
+    }
+
+
+}
+
+.aspects {
+    padding: 120px 0 80px 0;
+
+    @include tablet{
+        padding-top: 80px;
+    }
+
+    &__title {
+        text-align: center;
+
+        h2 {
+            padding-top: 20px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        gap: 20px;
+        padding: 20px 10px 0;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        @include mobile{
+            display: block;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $white;
+            padding: 20px;
+
+            @include tablet{
+                flex-basis: 31%;
+            }
+
+            @include mobile{
+                margin-top: 20px;
+            }
+            img {
+                width: 100px;
+            }
+
+            p {
+                text-align: center;
+                font-size: 14px;
+            }
+
+        }
+    }
+}
+
+// about
+
+.about {
+    background-color: $about-background;
+    padding: 80px 0;
+
+    @include tablet{
+        padding-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+        gap: 30px;
+
+        @include tablet{
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+
+    &__choose-us{
+    flex-basis: 50%;
+
+        p {
+            color: $text-color;
+            padding-top: 10px;
+        }
+
+        &__features{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 40px;
+            padding-top: 60px;
+            
+            &__item {
+                display: flex;
+                flex-basis: 40%;
+
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            
+                &__description {
+                    padding-left: 30px;
+            
+                    span {
+                        font-size: 30px;
+                        color: $subtitle;
+                    }
+                }
+            
+            }
+        }
+    }
+    
+    &__image {
+    
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    
+    }
+}
+
+
+
+// courses
+
+.courses {
+    padding: 80px 0;
+
+    @include mobile{
+        padding: 0 12px;
+    }
+
+    &__title {
+        text-align: center;
+
+        h2 {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.courses__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 30px;
+
+    &__item {
+        background-color: $white;
+        max-width: 100%;
+        position: relative;
+
+        @include tablet{
+            flex-basis: 48%;
+        }
+
+        @include mobile{
+            width: 100%;
+        }
+
+        img{
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__date {
+            background-color: $primary-color;
+            color: $white;
+            display: inline-block;
+            padding: 4px 12px;
+            position: absolute;
+            left: 0px;
+            top: 10px;
+            font-weight: 500;
+        }
+
+        &__description {
+            padding: 20px 0 20px 20px;
+
+            h3 {
+                line-height: 1.5;
+                padding-bottom: 14px;
+            }
+
+            .course-button {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// gallery
+
+.gallery {
+
+    padding-bottom: 80px;
+
+    @include mobile{
+        padding-top: 60px;
+    }
+
+    .subheading{
+        padding: 0 30px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 30px;
+
+        img {
+            flex-basis: 25%;
+            max-width: 100%;
+            width: 25%;
+
+            @include tablet{
+                flex-basis: 33.33%;
+            }
+
+            @include mobile{
+                flex-basis: 50%;
+            }
+        }
+    }
+}
+
+// team -- instructors
+
+.team {
+    padding-bottom: 80px;
+
+    &__gallery {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 60px;
+
+        @include tablet{
+            &__instructor{
+                flex-basis: 29%;
+            }
+        }
+
+        @include mobile{
+            display: block;
+        }
+
+        img{
+            width: 100%;
+            max-width: 100%;
+
+            @include mobile {
+                padding-top: 20px;
+            }
+        }
+
+
+        &__instructor__title {
+            font-size: 18px;
+            font-weight: 500;
+            color: $subtitle;
+        }
+
+        p {
+            text-align: center;
+
+            &:nth-child(2) {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+// appointment
+
+.appointment {
+
+    position: relative;
+    z-index: 999;
+
+    .container {
+        background-color: $primary-color;
+        padding: 60px;
+
+        @include mobile{
+            padding: 40px 20px;
+        }
+    }
+
+    &__title {
+
+        h2 {
+            color: $white;
+            padding-top: 20px;
+        }
+    }
+
+    &__form {
+
+        padding-top: 20px;
+        row-gap: 24px;
+        justify-content: center;
+
+        input,
+        select {
+            height: 40px;
+            width: 100%;
+            border: none;
+            background-color: #7C89BD;
+            color: white;
+            padding-left: 20px;
+            border-radius: 2px;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        #message {
+            border: none;
+            background-color: #7C89BD;
+            border-radius: 2px;
+            color: white;
+            width: 100%;
+            padding: 16px 0 0 20px;
+
+        }
+
+        &__field {
+            color: #7C89BD;
+        }
+
+        .course-button {
+            background-color: white;
+            border: none;
+        }
+    }
+}
+
+// testimonials
+
+.testimonial {
+    background-color: $about-background;
+    margin-top: -300px;
+    padding: 360px 0 60px 0;
+    text-align: center;
+
+    &__qoute {
+        color: $primary-color;
+        font-size: 84px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    &__trainer {
+        padding-top: 20px;
+
+        p {
+            padding-top: 10px;
+        }
+
+        span {
+            font-weight: 700;
+            color: $subtitle;
+        }
+    }
+
+    &__dots {
+        padding-top: 16px;
+
+        &__dot {
+            height: 8px;
+            width: 8px;
+            background-color: #8A8E9E;
+            border-radius: 50%;
+            margin: 8px;
+            display: inline-block;
+            border-color: red;
+
+            &:nth-child(1) {
+                border-color: red;
+            }
+        }
+    }
+}
