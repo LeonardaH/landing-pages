@@ -1,0 +1,39 @@
+@import "./media";
+
+@include desktop{   
+    .header__mobile{
+        display: none;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    &__logo{
+        width: $paddingSection;
+        height: $paddingSection;
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.875rem;
+
+        &__links{
+            display: flex;
+
+            li{
+                padding-left: 1.875rem;
+            }
+        }
+
+        &__bag{
+            display: flex;
+            align-items: center;
+            gap: $padding20;
+        }
+    }
+}
+
