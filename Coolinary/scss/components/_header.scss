@@ -1,0 +1,116 @@
+.header {
+    @include flexbox;
+    height: 60px;
+
+    &__left{
+        @include mobile{
+            @include flexbox;
+            gap: 20px;
+        }
+    }
+
+    &__holder{
+        @include flexbox;
+
+        &__nav {
+                @include flexbox;
+                gap: $smallGap;
+                @include mobile {
+                        display: none;
+                        background-color: $whiteColor;
+                        position: absolute;
+                        top: 60px;
+                        left: 10%;
+                        transform: translate(-3.125rem);
+                        height: 240px;
+                        width: 100%;
+                    }
+        
+        
+                &__links {
+                    @include flexbox;
+                    @include mobile{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        width: 90%;
+                        max-width: 100%;
+                        gap: 20px;
+                    }
+        
+
+        
+                    li {
+                        padding-left: 30px;
+
+                        @include mobile{
+                            padding: 0;
+                        }
+        
+                        a {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        
+                &__card {
+                    @include flexbox;
+                    padding-left: 30px;
+        
+                    a {
+                        color: $primaryColor;
+                    }
+        
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+    }
+
+}
+
+// hamburger
+
+.header__left__hamburger{
+    display: none;
+
+    @include mobile{
+        width: 32px;
+        height: 30px;
+        @include flexbox(center, center, column);
+        cursor: pointer;
+        
+        .line {
+            height: 3px;
+            width: 100%;
+            background-color: $primaryColor;
+            display: block;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        
+        .line1 {
+            transform: translateY(-4px);
+        }
+        
+        .line3 {
+            transform: translateY(4px);
+        }
+    }
+}
+
+// transforming menu
+
+.change .line1 {
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: translateY(-2px) rotateZ(45deg);
+}

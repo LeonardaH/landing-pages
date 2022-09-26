@@ -1,0 +1,17 @@
+@import "./mixin";
+
+.container{
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include tablet{
+        width: 90%;
+    }
+}
+
+.fluid-container{
+    width: 100%;
+    max-width: 100%;
+}
+

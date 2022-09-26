@@ -1,0 +1,59 @@
+@import "./variable";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.section-spacing{
+    padding-top: $sectionSpacing;
+}
+
+.centered{
+    text-align: center;
+}
+
+h1{
+    font-size: $extraLarge;
+}
+
+h2{
+    font-size: $large;
+}
+
+h1, h2, h3, h4{
+    font-weight: 500;
+}
+
+p{
+    color: $paragText;
+}
+
+.btn{
+    background-color: $primaryColor;
+    border: none;
+    width: 120px;
+    height: 34px;
+    display: block;
+
+    a{
+        color: $whiteColor;
+    }
+}
+
+.show{
+    display: block!important;
+}
+
+.hide{
+    display: none;
+}

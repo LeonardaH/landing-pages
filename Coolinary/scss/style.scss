@@ -1,0 +1,168 @@
+@import "./base/layout";
+@import "./base/mixin";
+@import "./base/global";
+@import "./base/variable";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/main";
+
+// .header{
+//     @include flexbox;
+//     height: 60px;
+
+//     &__nav{
+//         @include flexbox;
+//         gap: $smallGap;
+
+//         &__links{
+//             @include flexbox;
+            
+//             li{
+//                 padding-left: 30px;
+
+//                 a{
+//                     color: $primaryColor;
+//                 }
+//             }
+//         }
+//         &__card{
+//             @include flexbox;
+
+//             a{
+//                 color: $primaryColor;
+//             }
+            
+//             img{
+//                 width: 20px;
+//                 height: 20px;
+//             }
+//         }
+//     }
+// }
+
+// // main
+
+// .main__wrapper{
+
+//     &__description{
+//         width: 500px;
+//         margin: 0 auto;
+
+//         h1{
+//             padding-bottom: 40px;
+//         }
+//     }
+
+//     &__gallery{
+//         @include flexbox;
+//         flex-wrap: wrap;
+//         gap: 50px;
+
+//         &__item{
+//             flex-basis: 48%;
+
+//             img{
+//                 width: 100%;
+//                 height: 100%;
+//                 max-width: 100%;
+//             }
+
+//             h3{
+//                 padding-top: $extraSmallSpacing;
+//             }
+
+//             p{
+//                 padding-top: $extraSmallSpacing;
+//             }
+//         }
+//     }
+//     .btn{
+//         margin-top: $mediumSpacing;
+//         margin: 0 auto;
+//     }
+// }
+
+// // teaser
+
+// .main__teaser{
+//     background-color: $sectionBackground;
+//     margin-top: $extraLargeSpacing;
+
+//     &__wrapper{
+//         @include flexbox;
+//         padding: $sectionSpacing 0;
+
+//         &__info{
+//             max-width: 340px;
+
+//             h2{
+//                 padding-bottom: $mediumSpacing;
+//             }
+//             p{
+//                 padding-bottom: $mediumSpacing;
+//             }
+//         }
+//     }
+// }
+
+// .main__feed{
+//     padding-top: $extraLargeSpacing;
+//     padding-bottom: $sectionSpacing;
+
+//     h2{
+//         padding-bottom: $sectionSpacing;
+//     }
+
+//     &__gallery{
+//         @include flexbox;
+
+//         img{
+//             width: 100%;
+//             max-width: 320px
+//         }
+//     }
+// }
+
+// //footer
+
+// .footer{
+//     background-color: $footerBackground;
+//     padding: $sectionSpacing 0;
+
+//     &__subscribe{
+//         h4{
+//             font-size: $medium;
+//             padding-bottom: 20px;
+//         }
+//         label{
+//             margin-right: 200px;
+//             color: $paragText;
+//         }
+//         input{
+//             border: none;
+//             background-color: $inputColor;
+//             width: 300px;
+//             height: 32px;
+//             padding-left: 12px;
+//             margin-bottom: 20px;
+//             margin-top: 4px;
+//         }
+//         .btn{
+//             margin: 0 auto;
+//         }
+//     }
+    
+//     &__social{
+//         padding-top: $mediumSpacing;
+
+//         img{
+//             width: 18px;
+//             height: 18px;
+//             margin-left: 14px;
+//         }
+
+//         p{
+//             padding-top: $mediumSpacing;
+//         }
+//     }
+// }

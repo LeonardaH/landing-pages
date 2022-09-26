@@ -1,0 +1,48 @@
+.footer {
+    background-color: $footerBackground;
+    padding: $sectionSpacing 0;
+
+    @include mobile{
+        padding: $mediumSpacing 0;
+    }
+
+    &__subscribe {
+        h4 {
+            font-size: $medium;
+            padding-bottom: 20px;
+        }
+
+        label {
+            margin-right: 200px;
+            color: $paragText;
+        }
+
+        input {
+            border: none;
+            background-color: $inputColor;
+            width: 300px;
+            height: 32px;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            margin-top: 4px;
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+    }
+
+    &__social {
+        padding-top: $mediumSpacing;
+
+        img {
+            width: 18px;
+            height: 18px;
+            margin-left: 14px;
+        }
+
+        p {
+            padding-top: $mediumSpacing;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.main__wrapper {
+
+    &__description {
+        max-width: 500px;
+        margin: 0 auto;
+
+        h1 {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__gallery {
+        @include flexbox;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        @include mobile{
+            display: block;
+        }
+
+        &__item {
+            flex-basis: 48%;
+
+            @include tablet{
+                flex-basis: 44%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+            }
+
+            h3 {
+                padding-top: $extraSmallSpacing;
+            }
+
+            p {
+                padding-top: $extraSmallSpacing;
+            }
+        }
+    }
+
+    .btn {
+        margin: $sectionSpacing auto 0 auto;
+    }
+}
+
+// teaser
+
+.main__teaser {
+    background-color: $sectionBackground;
+    margin-top: $extraLargeSpacing;
+
+    &__wrapper {
+        @include flexbox;
+        padding: $sectionSpacing 0;
+
+        @include mobile{
+            display:  block;
+        }
+
+        &__info {
+            max-width: 340px;
+
+            @include tablet {
+                max-width: 300px;
+            }
+
+            h2 {
+                padding-bottom: $mediumSpacing;
+            }
+
+            p {
+                padding-bottom: $mediumSpacing;
+            }
+        }
+
+        &__image{
+
+            @include mobile{
+                padding-top: $mediumSpacing;
+            }
+
+            img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+// instagram feed
+
+.main__feed {
+    padding-top: $extraLargeSpacing;
+    padding-bottom: $sectionSpacing;
+
+    h2 {
+        padding-bottom: $sectionSpacing;
+    }
+
+    &__gallery {
+        @include flexbox;
+        max-width: 100%;
+        width: 100%;
+
+        @include mobile{
+            display: block;
+        }
+
+        img {
+            width: 320px;
+            max-width: 100%;
+
+            @include tablet{
+                width: 140px;
+            }
+
+            @include mobile{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
