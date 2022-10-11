@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zyro</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap"
+      crossorigin
+    /> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&amp;family=Lato:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/Zyro/src/scss/styles.css" />
+  </head>
+  <body>
+
+    <!-- Mobile version -->
+    <header class="header__mobile container">
+      <div class="header__mobile__left">
+        <div class="header__mobile__left__hamburger">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <img class="header__mobile__left__logo" src="src/assets/logo/logo.svg" alt="logo">
+        <nav class="header__mobile__left__nav">
+          <ul class="header__mobile__left__nav__links">
+            <li>
+              <a href="#" class="hightlight">Home</a>
+            </li>
+            <li>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <a href="#">Customer care</a>
+            </li>
+            <li>
+              <a href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__mobile__right">
+        <div class="header__mobile__right__bag">
+          <img src="src/assets/icons/shopping-icon.svg" alt="shopping-icon" class="header__mobile__right__bag__icon">
+          <a href="#">Shopping bag(0)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Desktop version -->
+    <header class="header container">
+        <img class="header__logo" src="src/assets/logo/logo.svg" alt="logo">
+        <nav class="header__nav">
+          <ul class="header__nav__links">
+            <li>
+              <a href="#" class="hightlight">Home</a>
+            </li>
+            <li>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <a href="#">Customer care</a>
+            </li>
+            <li>
+              <a href="#">Contacts</a>
+            </li>
+          </ul>
+          <div class="header__nav__bag">
+            <img src="src/assets/icons/shopping-icon.svg" alt="shopping-icon" class="header__nav__bag__icon">
+            <a href="#">Shopping bag(0)</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Main Content Top -->
+
+    <main>
+      <section class="main container">
+        <div class="main__content">
+          <h1>You deserve a comfortable life</h1>
+          <p>We have made quality our habit. It's not something we just strive for - we live by this principle every day</p>
+          <a class="btn">Our store</a>
+        </div>
+
+<!-- Main Gallery -->
+
+        <div class="main__images">
+          <img src="src/assets/startteaser/startteaser-1.png" alt="chair">
+          <img src="src/assets/startteaser/startteaser-2.png" alt="chair" class="main__images--2">
+          <img src="src/assets/startteaser/startteaser-3.png" alt="chair">
+        </div>
+      </section>
+
+<!-- Main info -->
+
+      <!-- Main info top -->
+      <section class="info container">
+        <div class="info__content">
+          <h2>Who we are</h2>
+          <h3>It's not just furniture - it's out passion</h3>
+        </div>
+        <div class="info__content__right">
+          <p>We have made quality out habit. It's not something that we just strive for - we live by this principle every day.<br>
+            <br>While most of the things about the creative process will be forgotten, the excellence of our products and service will be remembered
+          </p>
+        </div>
+      </section>
+
+      <!-- Main info bottom -->
+      <section class="info container">
+        <div class="info__content">
+          <h2>our credo</h2>
+          <h3>Comfort Beauty Versatility</h3>
+          <p>We have made quality our habit. It's not something that we just strive for - we live by this principle every day</p>
+        </div>
+        <div class="info__content__right--center">
+          <img src="src/assets/teaser/teaser.png" alt="">
+        </div>
+      </section>
+
+      <!-- Instagram feed  -->
+      <section class="feed container">
+        <h4>Instagram feed</h4>
+        <div class="feed__images">
+          <img src="src/assets/instafeed/insta-1.png" alt="instagram">
+          <img src="src/assets/instafeed/insta-2.png" alt="instagram">
+          <img src="src/assets/instafeed/insta-3.png" alt="instagram">
+          <img src="src/assets/instafeed/insta-4.png" alt="instagram">
+        </div>
+        <a href="#" class="btn">Follow us</a>
+      </section>
+<!-- 
+      Contact form -->
+      <section class="contact container">
+        <div class="contact__info">
+          <h3>Have a question?</h3>
+          <p>Left your e-email and we will contact you soon</p>
+        </div>
+        <div class="contact__form">
+          <form action="#">
+            <div class="contact__form__inputs">
+              <label for="name">Name*</label><br>
+              <input type="text" placeholder="Your name" required><br>
+            </div>
+
+            <div class="contact__form__inputs">
+              <label for="lname">Last name</label><br>
+              <input type="text" placeholder="Your last name"><br>
+            </div>
+
+            <div class="contact__form__inputs">
+              <label for="email">Your email*</label><br>
+              <input type="email" placeholder="example@mail.com" required><br>
+            </div>
+
+            <div class="contact__form__inputs">
+              <label for="message">Message</label><br>
+              <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+
+            <a href="#" class="btn btn--center">Contact me</a>
+          </form>
+        </div>
+      </section>
+
+      <!-- Main Background image -->
+      <section class="background-image"></section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer container">
+      <!-- Footer left -->
+      <div class="footer__address">
+        <h4>Address</h4>
+        <a>3721 Single Street<br>
+          Quincy, MA 02169
+        </a>
+        <div class="footer__address__social">
+          <img src="src/assets/icons/twitter-icon.svg" alt="twitter">
+          <img src="src/assets/icons/facebook-icon.svg" alt="facebook">
+          <img src="src/assets/icons/instagram-icon.svg" alt="instagram">
+        </div>
+      </div>
+      <!-- Footer middle -->
+      <div class="footer__contacts">
+        <h4>Contact</h4>
+        <a href="tel:123-456-7890">123-456-7890</a><br>
+        <a href="mailto:info@email.com">info@email.com</a>
+      </div>
+      <!-- Footer right -->
+      <div class="footer__subscribe">
+        <h4 class="subscribe-title">Subscribe to our newsletter</h4>
+        <label for="email" class="label">Email address*</label><br>
+        <input type="email" placeholder="Your email address"><br>
+        <a href="#" class="btn">Submit</a>
+      </div>
+    </footer>
+
+    <script src="src/scripts/script.js"></script>
+  </body>
+</html>
