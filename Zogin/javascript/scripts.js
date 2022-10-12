@@ -5,10 +5,11 @@ const header = document.querySelector(".mobile__header__main");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("change");
-  header.classList.toggle("show");
   header.classList.toggle("hide");
+  header.classList.toggle("show");
 });
 
 openNav.addEventListener("click", () => {
+  navMenu.classList.toggle("hide");
   navMenu.classList.toggle("show");
-});
+})

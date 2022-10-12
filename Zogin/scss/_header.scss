@@ -1,9 +1,4 @@
-@import "./base";
-@import "./media";
-@import "./variable";
-@import "./button";
-
-.small-header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +9,6 @@
     }
 
     &__logo {
-
         img {
             width: 70%;
             max-width: 100%;
@@ -29,6 +23,7 @@
         @include tablet{
             display: none;
         }
+
         li {
             list-style: none;
             text-transform: uppercase;
@@ -49,7 +44,7 @@
 }
 
 .main {
-    background-image: url(/Zogin/assets/instructors/instructor-01.jpg);
+    background-image: url(/assets/slider/hero-1.webp);
     background-size: cover;
     background-position: center;
     max-height: 600px;
@@ -61,7 +56,7 @@
         padding-top: 14px;
 
         @include mobile {
-                display: none;
+            display: none;
         }
 
         a{
@@ -83,6 +78,10 @@
                 font-weight: 600;
 
                 &.highlight {
+                    text-decoration: underline;
+                }
+
+                &:hover{
                     text-decoration: underline;
                 }
             }
